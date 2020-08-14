@@ -1,0 +1,23 @@
+// Contributed by Harshith, Account Manager - Measure Marketer
+//CJS - Length
+
+function getLength() {return document.getElementsByClassName("ng-value").length;}
+
+//CJS - Tyre Brand
+
+function getTireBrands() {
+    var raw = Array.from(document.getElementsByClassName("ng-value")).splice(2)
+    var brands = ''
+    for(var i=0; i<raw.length; i++) {
+        brands = brands+raw[i].innerText.slice(1)+', '
+    }
+    return brands.slice(0, brands.length-2)
+}
+
+// CJS Tyre Size Variable
+
+function getTyreSize() {return document.getElementsByClassName("ng-value")[1].innerText; }
+
+// CJS- Vehicle Model Variable
+
+function getVehicleModel() {return document.getElementsByClassName("ng-value")[0].innerText; }
